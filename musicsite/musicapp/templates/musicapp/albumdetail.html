@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ album.albumname }}</h2>
+<p>{{ album.genre }}</p>
+<p>{{ album.artist }}</p>
+<p>{{ album.issueyear }}</p>
+<p>{{ album.tracks }}</p>
+
+<h3>Reviews</h3>
+{% for r in reviews %}
+    <h4>{{ r.reviewtitle }}</h4>
+    <p>{{ r.reviewdate }}</p>
+    <p>{{ r.rating }}</p>
+    <p>{{ r.reviewtext }}</p>
+
+{% endfor %}
+
+{% endblock %}

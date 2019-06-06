@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Genres</h2>
+<table class="table">
+    <tr>
+        <th>Genre Name</th>
+        <th>Genre Description</th>
+    </tr>
+    {% for g in genres_list %}
+    <tr>
+        <td>{{g.genrename}}</td>
+        <td>{{g.genredescription}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
